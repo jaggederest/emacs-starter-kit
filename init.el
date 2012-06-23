@@ -9,6 +9,16 @@
 ;; and brighter; it simply makes everything else vanish."
 ;; -Neal Stephenson, "In the Beginning was the Command Line"
 
+;; set custom window size
+(set-frame-position (selected-frame) 0 0)
+(set-frame-size (selected-frame) 200 52)
+(set-frame-parameter (selected-frame) 'alpha 95)
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) 
+(setq mouse-wheel-progressive-speed nil) 
+(setq mouse-wheel-follow-mouse 't) 
+(setq scroll-step 1) 
+
 ;; Load path etc.
 
 (setq dotfiles-dir (file-name-directory
@@ -76,3 +86,4 @@
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;;; init.el ends here
+(set-default 'tramp-default-proxies-alist (quote ((".*" "\\`root\\'" "/ssh:%h:"))))

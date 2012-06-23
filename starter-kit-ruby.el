@@ -94,5 +94,9 @@ exec-to-string command, but it works and seems fast"
 ;; TODO: set up ri
 ;; TODO: electric
 
+(setq ruby-indent-level 2)
+(setq indent-tabs-mode 0)
+(setq default-tab-width 8)
+
 (provide 'starter-kit-ruby)
 ;; starter-kit-ruby.el ends here
